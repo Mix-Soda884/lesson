@@ -11,7 +11,7 @@ class Program
         fruits.Add(fruit);
         while (true)
         {
-            if(Console.ReadLine.() == "99")
+            if(Console.ReadLine() =="99")
             {
                 break;
             }
