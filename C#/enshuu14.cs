@@ -1,18 +1,24 @@
 using System;
 public class Hello{
     public static void Main(){
-        int x,v,y;
-        Console.WriteLine("3以上で10未満の2つ数字を入力してください");
+        int x,v;
+        int y = 0;
+        int i = 0;
+        Console.WriteLine("整数を入力してください");
         x = int.Parse(Console.ReadLine());
-        y = int.Parse(Console.ReadLine());
-        if(3=<x=>9)
+        if(x%2==0)
         {
-            if(3<=y>=9)
-            {
-                for(v=x;;v=){
-                    Console.WriteLine(v);
-                }
+            for(v=0;v<=x;v=v+1){
+                y += v;
+                Console.WriteLine(y);
             }
-        }
+       }
+       else if(x%2==1)
+       {
+        for(v=0;v<=x;v=v+2){
+                i += v;
+                Console.WriteLine(i);
+            }
+       }
     }
 }
