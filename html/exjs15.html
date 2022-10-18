@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>exjs15</title>
+</head>
+
+<body>
+    <script>
+        //その日の曜日に合わせて、気持ちを表現するプログラム。
+        //JavaScriptでは、getDay()メソッドで曜日番号を取得できる。
+        //曜日番号は、日曜日=0、月曜日=1、火曜日=2、となっている。
+        var d = new Date();
+        theDay = d.getDay();
+        switch (theDay) {
+            case 5:
+                document.write("Finally Friday");
+                break;
+            case 6:
+                document.write("Super Saturday");
+                break;
+            default:
+                document.write("I'm looking forward to this weekend!");
+        }
+    </script>
+</body>
+
+</html>
