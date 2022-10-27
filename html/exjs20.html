@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>exjs20</title>
+    <script>
+        function show_prompt() {
+            var name = prompt("あなたの名前は？", "ジェームズ・ボンド");
+            if (name != null && name != "") {
+                document.write("こんにちは、" + name + "!私のホームページにようこそ");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="butten" onclick="show_prompt()" value="クリックして名前を入力してね" />
+</body>
+
+</html>

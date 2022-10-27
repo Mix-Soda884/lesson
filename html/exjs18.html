@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>exjs18</title>
+    <script>
+        function disp_confirm()
+        {
+            var r=confirm("ボタンを押してね");
+            if(r==true)
+            {
+                document.write("「OK」が押されました");
+            }
+            else
+            {
+                document.write("「キャンセル」が押されました");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="butten" onclick="disp_confirm()" value="確認ダイアボックスを表示します。" />
+</body>
+
+</html>

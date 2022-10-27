@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>exjs19</title>
+    <script>
+        function show_prompt() {
+            var name = prompt("お名前を入力してください","ハリー・ポッター");
+            if (name != null && name != "") {
+                document.write("こんにちは"+ name + "!ご機嫌いかが？");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="butten" onclick="show_prompt()" value="入力ダイアログを表示" />
+</body>
+
+</html>
