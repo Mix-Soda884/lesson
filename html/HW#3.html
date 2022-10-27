@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>HW#2(22111288)</title>
+    <title>HW#3(22111288)</title>
 </head>
 
 <body bgcolor="00FF00">
@@ -22,13 +22,28 @@
                         var weight = 56;
                         var st_weight_m = (height - 80) * 0.7;
                         var st_weight_f = (height - 80) * 0.6;
+                        var blood = "A";
+                        var chA = "真面目、誠実、神経質、周りを気にする";
+                        var chB = "好奇心旺盛、独創的、好き嫌いが激しい、衝動的";
+                        var chO = ("行動力がある、裏表が少ない、大らか、大雑把");
+                        var chAB = ("感受性が強い、クール、独創的、面倒を嫌う、打算的");
                         document.write("氏名:", name, "<br>");
                         document.write("性別:", gender, "<br>");
                         document.write("誕生日:", byear, "年", bmonth, "月", bdate, "日", "<br>");
                         document.write("身長:", height, "cm", "<br>");
                         document.write("体重:", weight, "kg", "<br>");
-                        document.write("身長から求めた標準体重:", st_weight_m,"kg");
-                        
+                        document.write("血液型:", blood, "型<br>")
+                        if (gender == "男性") {
+                            document.write("標準体重:", st_weight_m, "kg", "<br>")
+                        }
+                        else{
+                            document.write("標準体重:", st_weight_f, "kg", "<br>")
+                        }
+                        if (blood == "A") { document.write("性格:", chA) }
+                        else if (blood == "B") { document.write("性格:", chB) }
+                        else if (blood == "O") { document.write("性格:", chO) }
+                        else { document.write("性格:", chAB) }
+
                     </script>
                 </td>
             </tr>
