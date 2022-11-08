@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <title>HW#4</title>
+</head>
+
+<body text="#191970" bgcolor="#1edeaa">
+    <font size="5">
+        <script type="text/javascript">
+            // 必要な変数の定義
+            var name; 		//氏名
+            var gender; 	//性別
+            var b_date; 	//生まれた日
+            var b_month; 	//生まれ月
+            var b_year; 	//生まれ年
+            var height; 	//身長
+            var weight; 	//体重
+            var st_weight;  //標準体重
+            var st_weight_m; //男性の標準体重
+            var st_weight_f; //女性の標準体重
+            var message;  // 表示するメッセージ;
+            var message1 = "太りすぎですね";
+            var message2 = "痩せすぎですね";
+            var message3 = "体重は標準的ですね";
+
+            var blood;  //自分の血液型（A, B, O またはAB）を設定する
+            var ch; //血液型による性格占い結果
+            var chA = "真面目、誠実、神経質、周りを気にする";// A型の性格の設定
+            var chB = "好奇心旺盛、独創的、好き嫌いが激しい、衝動的";// B型の性格の設定
+            var chO = "行動力がある、裏表が少ない、大らか、大雑把";// O型の性格の設定
+            var chAB = "感受性が強い、クール、独創的、面倒を嫌う、打算的";// AB型の性格の設定
+            // 名前を尋ねて、答えを変数 name に代入
+            var name = prompt("名前を入力してください","林浩史");
+            // 男性かと尋ねて、OKならば、変数 gender に 「男」を代入、キャンセルならば「女」を代入
+            var r =confirm("男性ですか？")
+            if(r == true){
+                gender == "男性";
+            }
+            else{
+                gender == "女性";
+            }
+            // 生まれ年を尋ねて、答えを変数 b_year に代入
+            var b_year = prompt("生まれ年を入力してください(半角数字)");
+            // 生まれ月を尋ねて、答えを変数 b_month に代入
+            var b_month = prompt("生まれ月を入力してください(半角数字)");
+            // 生まれた日を尋ねて、答えを変数 b_date に代入
+            var b_date = prompt("生まれた日を入力してください(半角数字)");
+            // 身長を尋ねて、答えを変数 height に代入
+            var height = prompt("身長は？");
+            // 体重を尋ねて、答えを変数 weight に代入
+            var weight = prompt("体重は？");
+            var st_weight_m = (height - 80) * 0.7; 	//男性の標準体重を求める式
+            var st_weight_f = (height - 70) * 0.6;    //女性の標準体重を求める式
+
+            // 性別と身長からこの人の標準体重(st_weight)を求める
+            if (gender == "男性") {
+                st_weight = st_weight_m;
+            }
+            else {
+                st_weight = st_weight_f;
+            }
+            //標準体重と比較して、「太りすぎ」、「やせすぎ」、「標準的」の判断を行う
+            if (st_weight == st_weight_m) {
+                if (st_weight_m < weight) {
+                    message = message1;
+                }
+                else if (st_weight_m > weight) {
+                    message = message2;
+                }
+                else {
+                    message = message3;
+                }
+            }
+            if (st_weight == st_weight_f) {
+                if (st_weight_f < weight) {
+                    message = message1;
+                }
+                else if (st_weight_f > weight) {
+                    message = message2;
+                }
+                else {
+                    message = message3;
+                }
+            }
+            // 血液型を尋ねて、答えを変数 blood に代入
+            var blood = prompt("血液型は何ですか(A,B,O,ABで答えてください)")
+            // 血液型からこの人の性格を占う
+            if (blood == "A") { ch = chA }
+            else if (blood == "B") { ch = chB }
+            else if (blood == "O") { ch = chB }
+            else { ch = chB }
+
+            // すべての結果をまとめて表示する
+            document.write("氏名：", name, "<br>");
+            document.write("性別：", gender, "<br>");
+            document.write("誕生日：", b_year, "年", b_month, "月", b_date, "日<br>");
+            document.write("身長：", height, "cm<br>");
+            document.write("体重：", weight, "kg<br>");
+            document.write("あなたの標準体重:", st_weight, "kg<br>");
+            document.write("状態:", message, "<br>");
+            document.write("血液型: ", blood, "型<br>");
+            document.write("性格:", ch, "<br>");
+        </script>
+    </font>
+</body>
+
+</html>
