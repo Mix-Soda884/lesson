@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> exjs27:ボタンをクリックせずに、入力ダイアログボックスをポップアップ </title>
+</head>
+
+<body background="http://www.yoshitama.shop/web2/ex27/halloween_back.jpg">
+    <div align="center">
+        <script type="text/javascript">
+            var p=confirm("Trick(OK) or Treat(CANCEL)?");
+            if (p==true)
+            [
+                document.write("<img src='http://www.yoshitama.shop/web2/ex27/trick.jpg'>");
+            ]
+            else
+            [
+                document.write("<img src='http://www.yoshitama.shop/web2/ex27/treat.jpg'>");
+            ]
+        </script>
+        <br>
+        <font size=6 color="pink">
+            このWebページが開く前に、警告ダイアログボックスがポップアップする
+        </font>
+    </div>
+</body>
+
+</html>

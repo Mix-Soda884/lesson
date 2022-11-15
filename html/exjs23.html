@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>exjs23</title>
+    <script>
+        function menseki(r){
+            return 3.14*r*r;
+        }
+        function enshu(r) {
+            return 2*3.14*r;
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        var r = 10;
+        document.write("半径=" + r + "<br>")
+        document.write("円周=" + enshu(r) + "<br>")
+        document.write("面積=" + menseki(r) )
+    </script>
+    <p>body内に書かれたスクリプトはhead内で定義された関数を呼び出している。</p>
+    <p>関数は数値を計算して結果を戻している。</p>
+</body>
+
+</html>

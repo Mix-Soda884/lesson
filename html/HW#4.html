@@ -40,15 +40,15 @@
                 gender == "女性";
             }
             // 生まれ年を尋ねて、答えを変数 b_year に代入
-            var b_year = prompt("生まれ年を入力してください(半角数字)");
+            var b_year = prompt("生まれ年を入力してください(半角数字)","2002");
             // 生まれ月を尋ねて、答えを変数 b_month に代入
-            var b_month = prompt("生まれ月を入力してください(半角数字)");
+            var b_month = prompt("生まれ月を入力してください(半角数字)","12");
             // 生まれた日を尋ねて、答えを変数 b_date に代入
-            var b_date = prompt("生まれた日を入力してください(半角数字)");
+            var b_date = prompt("生まれた日を入力してください(半角数字)","25");
             // 身長を尋ねて、答えを変数 height に代入
-            var height = prompt("身長は？");
+            var height = prompt("身長は？","175");
             // 体重を尋ねて、答えを変数 weight に代入
-            var weight = prompt("体重は？");
+            var weight = prompt("体重は？","55");
             var st_weight_m = (height - 80) * 0.7; 	//男性の標準体重を求める式
             var st_weight_f = (height - 70) * 0.6;    //女性の標準体重を求める式
 
@@ -83,7 +83,7 @@
                 }
             }
             // 血液型を尋ねて、答えを変数 blood に代入
-            var blood = prompt("血液型は何ですか(A,B,O,ABで答えてください)")
+            var blood = prompt("血液型は何ですか(A,B,O,ABで答えてください)","A")
             // 血液型からこの人の性格を占う
             if (blood == "A") { ch = chA }
             else if (blood == "B") { ch = chB }
