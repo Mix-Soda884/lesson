@@ -3,17 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>exjs33</title>
+    <title>HW#5</title>
 </head>
 
 <body>
     <script>
-        for (i = 1; i <= 9; i++) {
-            for (j = 1; j <= 9; j++) {
+        var i = 1;
+        var j = 1;
+        while (i <= 9) 
+        {
+            j = 1;
+            while (j <= 9)
+             {
                 document.write(i * j + " ");//表を読みやすくするために、
                 //数値の間に半角スペースを入れる。
+                j=j+1;
             }
             document.write("<br>");//各段が終われば改行する。
+            i=i+1;
         }
     </script>
     <p>これは九九の計算表です。</p>

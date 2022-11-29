@@ -3,13 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>exjs33</title>
+    <title>exjs36</title>
 </head>
 
 <body>
     <script>
         for (i = 1; i <= 9; i++) {
+            if (i == 3) { continue }
             for (j = 1; j <= 9; j++) {
+                if (j == 3) { continue }
                 document.write(i * j + " ");//表を読みやすくするために、
                 //数値の間に半角スペースを入れる。
             }
