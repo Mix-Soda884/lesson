@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>exjs48:ブラウザのタイトルバー内を流れるメッセージ</title>
+    <script>
+        
+        mystring="  ご訪問ありがとうございます。何か面白いものを見つけてくださいね。　";
+        var i=0;
+
+        function scrolltext(){
+            if(i<=mystring.length)
+            {
+                document.title = mystring.substring(i,i+30);
+                i++;
+                setTimeout("scrolltext()",100);
+            }
+            else{
+                i=0;
+                scrolltext();
+            }
+        }
+        
+        
+    </script>
+</head>
+
+<body text="#ffffff" bgcolor="#800000" onload="scrolltext()">
+
+    <h1>○△のページにようこそ!</h1>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>exjs52</title>
+    <script>
+        function startTime() 
+        {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m); 
+            s = checkTime(s); 
+            document.myForm.myBox.value = " Japan Time: " + h + ":" + m + ":" + s; 
+            t = setTimeout('startTime()', 500); 
+        }
+        function checkTime(i) 
+        {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+    </script>
+</head>
+
+<body onload="startTime()" bgcolor="black" text="white"> 
+    <form name="myForm">
+        <input type="text" name="myBox" size="18"> 
+    </form>
+    <h1>
+        Welcome to my homepage
+    </h1>
+</body>
+
+</html>
