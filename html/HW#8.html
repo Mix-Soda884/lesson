@@ -1,0 +1,31 @@
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HW#8: ランダムにネコ写真を表示する</title>
+</head>
+
+<body bgcolor="black">
+
+    <script type="text/javascript">
+        function showpic(){
+            var pic = new Array();
+            pic[0] = "http://www.yoshitama.shop/web2/HW8/cat1.jpg";
+            pic[1] = "http://www.yoshitama.shop/web2/HW8/cat2.jpg";
+            pic[2] = "http://www.yoshitama.shop/web2/HW8/cat3.jpg";
+            pic[3] = "http://www.yoshitama.shop/web2/HW8/cat4.jpg";
+            pic[4] = "http://www.yoshitama.shop/web2/HW8/cat5.jpg";
+            var i = Math.floor(Math.random() * pic.length);
+            document.src(pic[i]);
+        }
+
+    </script>
+    <div align="center">
+        <img src=" http://www.yoshitama.shop/web2/HW8/cat1.jpg" name="pic">
+        <form>
+            <input type="button" value="click" onclick="showpic">
+        </form>
+    </div>
+</body>
+
+</html>
